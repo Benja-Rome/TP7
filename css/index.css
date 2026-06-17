@@ -1,0 +1,41 @@
+main {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, auto);
+	padding: 16px;
+	gap: 16px;
+
+	place-content: center;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.imagen {
+	width: 400px;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 16px;
+
+	border: 6px solid var(--color2);
+}
+
+.grid-item {
+	display: flex;
+
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	background-color: var(--color3);
+	color: var(--color2);
+	border-radius: 20px;
+
+	flex-grow: 1;
+	height: 500px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}

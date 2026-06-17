@@ -1,0 +1,52 @@
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	margin: 20px;
+	flex-grow: 1;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+
+	margin: 20px;
+	gap: 20px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	background-color: var(--color3);
+	padding: 16px;
+	border-radius: 30px;
+	width: 30%;
+}
+
+.casilla {
+	width: 100%;
+	resize: vertical;
+}
+
+.info-contacto {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--color3);
+    border-radius: 20px;
+    text-align: center;
+    width: 30%;
+}
+
+.info-contacto ul {
+    list-style: none;
+    padding: 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
