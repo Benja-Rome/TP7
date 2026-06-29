@@ -1,7 +1,5 @@
 main {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, auto);
 	padding: 16px;
 	gap: 16px;
 
@@ -11,8 +9,9 @@ main {
 }
 
 .imagen {
-	width: 400px;
-	height: 300px;
+	width: 100%;
+	max-width: 400px;
+	height: auto;
 	object-fit: cover;
 	border-radius: 16px;
 
@@ -30,6 +29,7 @@ main {
 	background-color: var(--color3);
 	color: var(--color2);
 	border-radius: 20px;
+	padding: 20px;
 
 	flex-grow: 1;
 	height: 500px;
@@ -38,4 +38,18 @@ main {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+@media (min-width: 768px) {
+	main {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, auto);
+	}
+}
+
+@media (max-width: 768px) {
+	main {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(4, auto);
+	}
 }

@@ -1,5 +1,9 @@
-img {
+.foto {
 	width: 40%;
+	max-width: 100%;
+	border-radius: 20px;
+	border: 6px solid var(--color2);
+	box-sizing: border-box;
 }
 
 main {
@@ -12,6 +16,7 @@ main {
 
 .qsy {
 	width: 60%;
+	max-width: 100%;
 	padding: 10px;
 	background-color: var(--color3);
 	border-radius: 20px;
@@ -22,6 +27,25 @@ main {
 	flex-direction: row;
 	gap: 20px;
 	margin: 20px 0px 20px 0px;
-
 	color: var(--color2);
+}
+
+@media (min-width: 768px) {
+	.fundador {
+		flex-direction: row;
+	}
+}
+
+@media (max-width: 768px) {
+	.fundador {
+		flex-direction: column;
+		height: auto;
+	}
+	.foto {
+		width: 100%;
+	}
+	.qsy {
+		width: 100%;
+		box-sizing: border-box;
+	}
 }

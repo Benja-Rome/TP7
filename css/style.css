@@ -20,10 +20,6 @@ body {
 
 header,
 nav {
-	position: relative;
-	position: sticky;
-	z-index: 100;
-
 	background-color: var(--color2);
 	color: var(--color1);
 
@@ -35,14 +31,15 @@ nav {
 	align-items: center;
 }
 
-header {
+.arriba {
+	position: relative;
+	position: sticky;
+	z-index: 100;
 	top: 0;
-	height: 70px;
 }
 
-nav {
-	top: 70px;
-	height: 50px;
+header {
+	height: 70px;
 }
 
 ul {
@@ -93,8 +90,8 @@ footer a {
 	color: #1e352f;
 	text-decoration-line: underline;
 
-	&:hover{
-		color:#2f6a4f
+	&:hover {
+		color: #2f6a4f;
 	}
 }
 
