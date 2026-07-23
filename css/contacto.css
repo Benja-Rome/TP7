@@ -1,71 +1,98 @@
+/* ==============================
+   CONTENEDOR PRINCIPAL (Mobile First)
+   ============================== */
 main {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-
-	margin: 20px;
-	flex-grow: 1;
-	gap: 20px;
+    display: flex;
+    flex-direction: column; /* Apilado por defecto en celulares */
+    align-items: center;
+    gap: 20px;
+    margin: 20px;
+    flex-grow: 1;
 }
 
-form {
-	display: flex;
-	flex-direction: column;
-	text-align: right;
-	gap: 20px;
-}
-
+/* ==============================
+   SECCIÓN: FORMULARIO
+   ============================== */
+/* Contenedor exterior del formulario */
 .wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	background-color: var(--color3);
-	padding: 40px 20px 40px 20px;
-	border-radius: 30px;
-	width: 35%;
-	margin: 20px;
-	box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: var(--color3);
+    padding: 40px 20px;
+    border-radius: 30px;
+    width: 100%; /* Ocupa todo el ancho en celular */
+    box-sizing: border-box;
+    color: var(--texto);
 }
 
+/* Elemento del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form input, form textarea, form button{
+    background-color: var(--color3);
+    color: var(--texto);
+}
+
+/* Alineación de las etiquetas y campos */
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Mejor usabilidad que alineado a la derecha */
+}
+
+/* Campo de texto extendido */
 .casilla {
-	width: 100%;
-	resize: vertical;
+    width: 100%;
+    resize: vertical;
 }
 
+/* ==============================
+   SECCIÓN: INFORMACIÓN DE CONTACTO
+   ============================== */
+/* Panel lateral de datos */
 .info-contacto {
-	margin: 20px;
-	padding: 20px;
-	background-color: var(--color3);
-	border-radius: 20px;
-	text-align: center;
-	width: 30%;
-	box-sizing: border-box;
+    padding: 20px;
+    background-color: var(--color3);
+    border-radius: 20px;
+    text-align: center;
+    width: 100%; /* Ocupa todo el ancho en celular */
+    box-sizing: border-box;
+    color: var(--texto);
 }
 
+/* Lista de datos de contacto */
 .info-contacto ul {
-	list-style: none;
-	padding: 0;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-@media (max-width: 768px) {
-	main {
-		flex-direction: column;
-		align-items: center;
-	}
+/* ==============================
+   DISEÑO RESPONSIVO (MEDIA QUERIES)
+   ============================== */
+/* Ajustes para pantallas de escritorio */
+@media (min-width: 992px) {
+    main {
+        flex-direction: row; /* Coloca el formulario y la info lado a lado */
+        align-items: flex-start;
+        justify-content: center;
+    }
 
-	.wrapper {
-		width: 100%;
-	}
+    .wrapper {
+        width: 50%;
+        max-width: 600px;
+    }
 
-	.info-contacto {
-		width: 100%;
-		margin-top: 0;
-	}
+    .info-contacto {
+        width: 30%;
+        max-width: 400px;
+    }
 }
