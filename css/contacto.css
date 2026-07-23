@@ -36,6 +36,13 @@ form {
 form input, form textarea, form button{
     background-color: var(--color3);
     color: var(--texto);
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    outline: none;
+    padding: 10px 15px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
 /* Alineación de las etiquetas y campos */
