@@ -1,55 +1,63 @@
-.foto {
-	width: 40%;
-	max-width: 100%;
-	border-radius: 20px;
-	border: 6px solid var(--color2);
-	box-sizing: border-box;
-}
-
+/* ==============================
+   CONTENEDOR PRINCIPAL
+   ============================== */
 main {
-	display: flex;
-	flex-direction: column;
-
-	align-items: center;
-	margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
 }
 
-.qsy {
-	width: 60%;
-	max-width: 100%;
-	padding: 10px;
-	background-color: var(--color3);
-	border-radius: 20px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-}
-
+/* ==============================
+   ESTRUCTURA DE LAS SECCIONES (Mobile First)
+   ============================== */
+/* Contenedor principal de cada sección */
 .fundador {
-	display: flex;
-	flex-direction: row;
-	gap: 20px;
-	margin: 20px 0px 20px 0px;
-	color: var(--color2);
+    display: flex;
+    flex-direction: column; /* Apilado en celulares por defecto */
+    gap: 20px;
+    margin: 20px 0;
+    color: var(--texto);
+    width: 100%;
 }
 
-@media (min-width: 768px) {
-	.fundador {
-		flex-direction: row;
-	}
+/* Caja del texto descriptivo */
+.texto-seccion {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--color3);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-	.fundador {
-		flex-direction: column;
-		height: auto;
-	}
-	.foto {
-		width: 100%;
-	}
-	.qsy {
-		width: 100%;
-		box-sizing: border-box;
-	}
+/* Elemento multimedia */
+.foto {
+    width: 100%;
+    border-radius: 20px;
+    border: 6px solid var(--texto);
+    box-sizing: border-box;
+}
+
+/* ==============================
+   DISEÑO RESPONSIVO (MEDIA QUERIES)
+   ============================== */
+/* Ajustes para pantallas de escritorio o tablets grandes */
+@media (min-width: 992px) {
+    .fundador {
+        flex-direction: row; /* Coloca imagen y texto lado a lado */
+        align-items: stretch; /* Iguala las alturas */
+    }
+
+    .texto-seccion {
+        width: 60%;
+    }
+
+    .foto {
+        width: 40%;
+        object-fit: cover;
+    }
 }
